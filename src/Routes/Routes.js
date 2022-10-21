@@ -4,7 +4,9 @@ import Categorie from "../Pages/Categories/Categorie";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import News from "../Pages/News/News";
+import TearmandCondition from "../Pages/other/TearmAndConditon/TearmandCondition";
 import Register from "../Pages/Register/Register";
+import PrivetRouter from "./PrivetRouter/PrivetRouter";
 
  const routes = createBrowserRouter([
     {
@@ -22,9 +24,10 @@ import Register from "../Pages/Register/Register";
             },
             {
                 path : '/news/:id',
-                element : <News></News>,
+                element : <PrivetRouter><News></News></PrivetRouter>,
                 loader : ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
             },
+        
             {
                 path : '/login',
                 element : <Login></Login>
@@ -32,6 +35,10 @@ import Register from "../Pages/Register/Register";
             {
                 path : '/register',
                 element : <Register></Register>
+            },
+            {
+                path : '/tearms',
+                element : <TearmandCondition></TearmandCondition>
             },
 
         ]

@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { FaRegBookmark, FaShareAlt,FaStar,FaEye } from "react-icons/fa";
 const NewsSummarycart = ({news}) => {
-        console.log(news)
         const {title,_id, total_view,rating, image_url, details,author} = news
     return (
         <Card className="mb-3">
