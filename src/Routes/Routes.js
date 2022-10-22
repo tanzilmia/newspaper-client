@@ -4,6 +4,7 @@ import Categorie from "../Pages/Categories/Categorie";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import News from "../Pages/News/News";
+import Profile from "../Pages/other/Profile/Profile";
 import TearmandCondition from "../Pages/other/TearmAndConditon/TearmandCondition";
 import Register from "../Pages/Register/Register";
 import PrivetRouter from "./PrivetRouter/PrivetRouter";
@@ -40,6 +41,10 @@ import PrivetRouter from "./PrivetRouter/PrivetRouter";
                 path : '/tearms',
                 element : <TearmandCondition></TearmandCondition>
             },
+            {
+                path : '/profile',
+                element : <PrivetRouter> <Profile></Profile> </PrivetRouter>,
+            }
 
         ]
     }

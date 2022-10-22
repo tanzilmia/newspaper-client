@@ -7,7 +7,7 @@ import './Login.css'
 const Login = () => {
     const [error, seterror] = useState('')
     const naviget = useNavigate()
-    const {login} = useContext(AuthContext)
+    const {login,setloading} = useContext(AuthContext)
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
  const handlelogin = (event) =>{
@@ -30,6 +30,9 @@ const Login = () => {
     })
     .catch(e => {
         seterror(e.message)
+    })
+    .finally(()=>{
+        setloading(false)
     })
  }
 

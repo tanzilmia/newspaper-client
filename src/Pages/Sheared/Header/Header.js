@@ -58,14 +58,14 @@ const Header = () => {
                }
                
                 </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Link to = '/profile'>
               {
                 user?.photoURL ?
                 <Image roundedCircle style={{heigth: '30px', width : '30px'}} src= {user.photoURL} />
                 :
                 <FaUserAlt/>
               }
-            </Nav.Link>
+            </Link>
           </Nav>
           <div className='d-lg-none'>
            <LeftSideNav></LeftSideNav>
