@@ -15,18 +15,18 @@ import PrivetRouter from "./PrivetRouter/PrivetRouter";
             {
                 path : '/' ,
                  element : <Home></Home>,
-                 loader : () => fetch('http://localhost:5000/news')
+                 loader : () => fetch('https://dragon-news-server-module-61.vercel.app/news')
             },
             {
                 path : '/categories/:id',
                 element : <Categorie></Categorie>,
-                loader : ({params}) => fetch(`http://localhost:5000/categori/${params.id}`)
+                loader : ({params}) => fetch(`https://dragon-news-server-module-61.vercel.app/${params.id}`)
             
             },
             {
                 path : '/news/:id',
                 element : <PrivetRouter><News></News></PrivetRouter>,
-                loader : ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+                loader : ({params}) => fetch(`https://dragon-news-server-module-61.vercel.app/news/${params.id}`)
             },
         
             {
